@@ -41,22 +41,16 @@ public class LinkedListFunctions {
         currentNode.next = node;
     }
 
-    //Method to delete the first element of the list
-    public void deleteFirst() {
+    //Method to append element at desired position in the list
+    public void appendingNode(int before, int data) {
         Node currentNode = head;
-        head = head.next;
-    }
-
-    //Method to delete the last element
-    public void deleteLast() {
-        Node currentNode = head, secondLast = null;
-        while (currentNode.next != null) {
-            secondLast = currentNode;
+        while (currentNode.data != before) {
             currentNode = currentNode.next;
         }
-        if (secondLast != null) {
-            secondLast.next = null;
-        }
+        Node node = new Node(data);
+        node.next = currentNode.next;
+        currentNode.next = node;
+
     }
 
     //Method to find the node
