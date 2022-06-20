@@ -1,7 +1,7 @@
 public class LinkedListNew {
     public static void main(String[] args) {
 
-        //Linked list created
+        //Linked list implementation
         LinkedListFunctions linkedListFunctions = new LinkedListFunctions();
         System.out.println("Linked list is :");
         linkedListFunctions.insertFirstNode(56);
@@ -14,6 +14,9 @@ public class LinkedListNew {
         linkedListFunctions.findNode(30);
         System.out.println("Element 40 added after node 30 in the list");
         linkedListFunctions.appendingNode(30, 40);
+        linkedListFunctions.toPrint();
+        System.out.println("Element 40 deleted from the list");
+        linkedListFunctions.deleteAnyNode(40);
         linkedListFunctions.toPrint();
     }
 }
