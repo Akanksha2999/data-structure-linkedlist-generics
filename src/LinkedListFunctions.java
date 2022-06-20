@@ -29,6 +29,7 @@ public class LinkedListFunctions {
         }
     }
 
+
     //Method to insert the element in between the list
     public void insertInBetween(int before, int after, int data) {
         Node currentNode = head;
@@ -46,6 +47,7 @@ public class LinkedListFunctions {
         head = head.next;
     }
 
+    //Method to delete the last element
     public void deleteLast() {
         Node currentNode = head, secondLast = null;
         while (currentNode.next != null) {
@@ -54,6 +56,17 @@ public class LinkedListFunctions {
         }
         if (secondLast != null) {
             secondLast.next = null;
+        }
+    }
+
+    //Method to find the node
+    public void findNode(int data) {
+        Node currentNode = head;
+        while (currentNode != null) {
+            if (currentNode.data == data) {
+                System.out.println(data + " Element found in the list ");
+            }
+            currentNode = currentNode.next;
         }
     }
 }
