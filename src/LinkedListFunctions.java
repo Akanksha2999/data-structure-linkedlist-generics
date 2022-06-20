@@ -40,4 +40,9 @@ public class LinkedListFunctions {
         currentNode.next = node;
     }
 
+    //Method to delete the first element of the list
+    public void deleteFirst() {
+        Node currentNode = head;
+        head = head.next;
+    }
 }
