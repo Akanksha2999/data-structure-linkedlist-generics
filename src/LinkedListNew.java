@@ -10,8 +10,8 @@ public class LinkedListNew {
         System.out.println("List after adding element in middle of the list is: ");
         linkedListFunctions.insertInBetween(56, 70, 30);
         linkedListFunctions.toPrint();
-        System.out.println("Linked list after deleting last element is: ");
-        linkedListFunctions.deleteLast();
+        System.out.println("Seaching element found or not is displayed ");
+        linkedListFunctions.findNode(30);
         linkedListFunctions.toPrint();
     }
 }
