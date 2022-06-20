@@ -7,8 +7,11 @@ public class LinkedListNew {
         linkedListFunctions.insertFirstNode(56);
         linkedListFunctions.insertLast(70);
         linkedListFunctions.toPrint();
-        System.out.println("List after adding element in middle of the list is");
+        System.out.println("List after adding element in middle of the list is: ");
         linkedListFunctions.insertInBetween(56, 70, 30);
+        linkedListFunctions.toPrint();
+        System.out.println("Linked list after deleting first element is: ");
+        linkedListFunctions.deleteFirst();
         linkedListFunctions.toPrint();
     }
 }
