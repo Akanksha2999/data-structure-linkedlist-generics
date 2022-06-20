@@ -15,8 +15,8 @@ public class LinkedListNew {
         System.out.println("Element 40 added after node 30 in the list");
         linkedListFunctions.appendingNode(30, 40);
         linkedListFunctions.toPrint();
-        System.out.println("Element 40 deleted from the list");
-        linkedListFunctions.deleteAnyNode(40);
+        System.out.println("Ordered linked list is as follows");
+        linkedListFunctions.ascendingOrder();
         linkedListFunctions.toPrint();
     }
 }
