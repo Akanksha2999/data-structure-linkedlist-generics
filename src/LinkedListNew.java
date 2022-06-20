@@ -8,6 +8,6 @@ public class LinkedListNew {
         list.add(56);
         list.add(30);
         list.add(70);
-        System.out.println("Elements in the list are:" + list);
+        System.out.println("Elements in the list are :" + list);
     }
 }
