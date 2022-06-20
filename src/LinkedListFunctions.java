@@ -1,55 +1,43 @@
 public class LinkedListFunctions {
     Node head;
 
-    public void addFirst(int data) {
-
-        Node newNode = new Node(data);
-        newNode.next = head;
-
-        head = newNode;
-
+    //Method to insert elements at first node in linked list
+    public void insertFirstNode(int data) {
+        Node node = new Node(data);
+        node.setData(data);
+        node.setNext(head);
+        head = node;
     }
 
-    public void addLast(int data) {
-
-        Node newNode = new Node(data);
-
-
-        if (head == null) {
-
-            head = newNode;
-
-            return;
-
+    //Method to insert elements at last node in linked list
+    public void insertLast(int data) {
+        Node currentNode = head;
+        while (currentNode.next != null) {
+            currentNode = currentNode.next;
         }
-
-
-        Node lastNode = head;
-
-        while (lastNode.next != null) {
-
-            lastNode = lastNode.next;
-
-        }
-
-
-        lastNode.next = newNode;
-
+        Node node = new Node(data);
+        node.setData(data);
+        currentNode.setNext(node);
     }
 
-
-    public void printList() {
-
-        Node currNode = head;
-
-
-        while (currNode != null) {
-
-            System.out.print(currNode.data + " -> ");
-
-            currNode = currNode.next;
-
+    //Method to print the list
+    public void toPrint() {
+        Node currentNode = head;
+        while (currentNode != null) {
+            currentNode.toPrint();
+            currentNode = currentNode.next;
         }
-        System.out.println("null");
     }
+
+    //Method to insert the element in between the list
+    public void insertInBetween(int before, int after, int data) {
+        Node currentNode = head;
+        while (currentNode.data != before && currentNode.data != after) {
+            currentNode = currentNode.next;
+        }
+        Node node = new Node(data);
+        node.next = currentNode.next;
+        currentNode.next = node;
+    }
+
 }

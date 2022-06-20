@@ -3,11 +3,12 @@ public class LinkedListNew {
 
         //Linked list created
         LinkedListFunctions linkedListFunctions = new LinkedListFunctions();
-        System.out.println("Elements added in the list are:");
-        linkedListFunctions.addFirst(56);
-        linkedListFunctions.addLast(30);
-        linkedListFunctions.addLast(70);
-        linkedListFunctions.printList();
-
+        System.out.println("Linked list is :");
+        linkedListFunctions.insertFirstNode(56);
+        linkedListFunctions.insertLast(70);
+        linkedListFunctions.toPrint();
+        System.out.println("List after adding element in middle of the list is");
+        linkedListFunctions.insertInBetween(56, 70, 30);
+        linkedListFunctions.toPrint();
     }
 }
