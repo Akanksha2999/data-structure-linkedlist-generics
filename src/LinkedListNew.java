@@ -1,13 +1,13 @@
-import java.util.LinkedList;
-
 public class LinkedListNew {
     public static void main(String[] args) {
 
         //Linked list created
-        LinkedList<Integer> list = new LinkedList<Integer>();
-        list.add(56);
-        list.add(30);
-        list.add(70);
-        System.out.println("Elements in the list are :" + list);
+        LinkedListFunctions linkedListFunctions = new LinkedListFunctions();
+        System.out.println("Elements added in the list are:");
+        linkedListFunctions.addFirst(70);
+        linkedListFunctions.addFirst(30);
+        linkedListFunctions.addFirst(56);
+        linkedListFunctions.printList();
+
     }
 }
